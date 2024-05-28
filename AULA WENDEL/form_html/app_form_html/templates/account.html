@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<title>Criar conta</title>
+</head>
+<body>
+	<section>
+		<form action="{% url 'users' %}" method="POST">
+			{% csrf_token %}
+			<h1>Crie sua conta</h1>
+			<fieldset>
+				<div class="container">
+					<input type="text" required name="name">
+					<label>Nome</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<input type="email" required name="email">
+					<label>E-mail</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<button name="submit">Criar conta</button>
+			</fieldset>
+		</form>
+	</section>
+</body>
+</html>
