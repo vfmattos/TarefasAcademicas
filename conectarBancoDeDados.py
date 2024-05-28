@@ -3,7 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pprint import pprint
 from colorama import init, Fore
 
-connectURL = 'mongodb+srv://fbmazetti:12345@cluster-db.blzhilc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-DB' 
+connectURL = 'mongodb+srv://<user>:<pass>@cluster-db.blzhilc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-DB' 
 
 client = MongoClient(connectURL)
 
